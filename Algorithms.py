@@ -18,12 +18,13 @@
     # Backtrack however far it needed. Move on to the next grid after getting the new digit.
 
 import numpy as np
-from io import StringIO
+
 
 # Utility function: To create new grid board
 def create_new():
     board = np.zeros((9,9), dtype=np.int32)
     return board
+
 
 # Utility function: To convert string puzzle to grid board
 def create_grid(board_in_string):
@@ -31,6 +32,7 @@ def create_grid(board_in_string):
     num = list(map(int, cleaned))
     board = np.array(num).reshape(9,9)
     return board
+
 
 # Utility function: To display grid board
 def display_grid(board):
